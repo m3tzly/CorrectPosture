@@ -41,7 +41,7 @@ COLOR_TEXTO_BOTON = (255, 255, 255)
 COLORES_PUNTOS = [(255, 0, 255), (0, 0, 255), (0, 255, 0), (64, 128, 255), (128, 64, 255)]
 RADIO_PUNTO = 4  # puntos de keypoints
 
-# Rutas ejemplo carrusel (1.jpg, 2.jpg, 3.jpg)
+# Rutas carrusel 
 CARRUSEL_ITEMS = [f"{i}.jpg" for i in range(1, 4)]
 
 
