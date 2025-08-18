@@ -312,8 +312,8 @@ class PostureApp:
             results = self.model.predict(frame, verbose=False)
             posture_info = {
                 "Postura cabeza": "correcta",
-                "Postura hombro derecho": "correcta",
                 "Postura hombro izquierdo": "correcta",
+                "Postura hombro derecho": "correcta",
                 "Postura general": "correcta"
             }
 
@@ -341,8 +341,8 @@ class PostureApp:
 
                 posture_info["Postura general"] = "correcta" if dif_general <= THRESHOLD_GENERAL else "incorrecta"
                 posture_info["Postura cabeza"] = "correcta" if dif_cabeza <= THRESHOLD_GENERAL else "incorrecta"
-                posture_info["Postura hombro derecho"] = "correcta" if dif_hombro_der <= THRESHOLD_HOMBRO else "incorrecta"
-                posture_info["Postura hombro izquierdo"] = "correcta" if dif_hombro_izq <= THRESHOLD_HOMBRO else "incorrecta"
+                posture_info["Postura hombro izquierdo"] = "correcta" if dif_hombro_der <= THRESHOLD_HOMBRO else "incorrecta"
+                posture_info["Postura hombro derecho"] = "correcta" if dif_hombro_izq <= THRESHOLD_HOMBRO else "incorrecta"
 
                 if (dif_general > THRESHOLD_GENERAL or dif_cabeza > THRESHOLD_GENERAL) and (time.time() - self.ultima_advertencia > INTERVALO_ADVERTENCIA):
                     self._warning("Endereza tu postura")
