@@ -35,12 +35,12 @@ python CorrectPosture.py
 ---
 ##  Controles
 - Teclas:
-- q ® Salir
-- a ® Imagen anterior del carrusel
-- s ® Imagen siguiente del carrusel
+- q -> Salir
+- a -> Imagen anterior del carrusel
+- s -> Imagen siguiente del carrusel
 - Botones en pantalla:
-- Anterior / Siguiente ® Navegar carrusel
-- Reiniciar Ref. ® Capturar una nueva postura de referencia
+- Anterior / Siguiente -> Navegar carrusel
+- Reiniciar Ref. -A Capturar una nueva postura de referencia
 ---
 ##  Flujo del programa
 1. Pantalla de preparación (15s por defecto): tiempo para colocarse frente a la cámara.
@@ -64,12 +64,12 @@ INTERVALO_CARRUSEL = 6
 - Dimensiones de ventana/panel y colores de la UI.
 ---
 ##  Estructura recomendada
- posture-yolo
-    CorrectPosture.py
-    requirements.txt
-    1.jpg
-    2.jpg
-    3.jpg
+- CorrectPosture
+    - CorrectPosture.py
+    - requirements.txt
+    - 1.jpg
+    - 2.jpg
+    - 3.jpg
 ---
 ##  Mejoras futuras
 
