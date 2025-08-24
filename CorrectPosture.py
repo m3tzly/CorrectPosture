@@ -27,6 +27,7 @@ CUENTA_REGRESIVA_INICIAL = 3      # Para capturar postura de referencia
 INTERVALO_ADVERTENCIA = 3         # Anti-rebote de advertencias
 INTERVALO_CARRUSEL = 6            # Autoplay del carrusel
 
+
 # Ventana / Layout
 ANCHO_FRAME = 800
 ALTO_FRAME = 720
@@ -300,6 +301,7 @@ class PostureApp:
         return False
 
     def bucle_principal(self):
+        CONTADOR_ADVERTENCIAS = 0   # Contador de advertencias para estudio
         self.en_bucle_principal = True  # Mostrar botón de reinicio
         fps_t0, fps_frames = time.time(), 0
         while True:
@@ -347,6 +349,8 @@ class PostureApp:
                 if (dif_general > THRESHOLD_GENERAL or dif_cabeza > THRESHOLD_GENERAL) and (time.time() - self.ultima_advertencia > INTERVALO_ADVERTENCIA):
                     self._warning("Endereza tu postura")
                     self.ultima_advertencia = time.time()
+                    CONTADOR_ADVERTENCIAS = CONTADOR_ADVERTENCIAS + 1
+                    print (f"Numero de posturas incorretas detectadas: {CONTADOR_ADVERTENCIAS}")
 
             fps_frames += 1
             if time.time() - fps_t0 >= 1.0:
